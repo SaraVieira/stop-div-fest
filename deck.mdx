@@ -72,6 +72,14 @@ export default Split
 * I have stickers
 
 ---
+export default Layout
+
+## STICKERS
+
+<BGImage src={require("file-loader!./images/stickers.jpg")}/>
+
+---
+
 
 export default Layout
 
@@ -95,11 +103,18 @@ export default Layout
 
 ---
 
-```html
-<div id="header">
-  ...
-</div>
-```
+<CodeSurfer
+  theme={nightOwl}
+  lang="markup"
+  code={`
+    <div id="header">
+      ...
+    </div>
+  `}
+ steps={[
+    { lines: [1, 10] }
+  ]}
+/>
 ---
 
 export default Layout
@@ -118,11 +133,19 @@ export default Layout
 
 ---
 
-```html
-<div role="main">
-  ...
-</div>
-```
+
+<CodeSurfer
+  theme={nightOwl}
+  lang="markup"
+  code={`
+    <div role="main">
+      ...
+    </div>
+  `}
+ steps={[
+    { lines: [1, 10] }
+  ]}
+/>
 ---
 
 export default Layout
