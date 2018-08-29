@@ -28,11 +28,10 @@ export default {
   },
   colors: {
     text: '#6AD798',
-    background: '#161923',
+    background: 'rgb(1, 22, 39)',
     link: '#fff',
     pre: '#fff',
     preBackground: '#051626',
-    code: '#fff',
-    codeBackground: '#051626'
+    code: '#fff'
   }
 }

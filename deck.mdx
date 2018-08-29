@@ -1,6 +1,7 @@
 export { default as theme } from './src/index'
 import { Head, Image } from 'mdx-deck'
-
+import nightOwl from "prism-react-renderer/themes/nightOwl"
+import { CodeSurfer } from "mdx-deck-code-surfer"
 import {LayoutNoFooter, Layout, CodeSanbox, Split, BGImage} from './src/index'
 
 
@@ -178,8 +179,408 @@ export default Split
 
 export default Layout
 
+# Let's look at a tweet
 
 ---
+
+export default Layout
+
+<BGImage src={require("file-loader!./images/tweet.png")}/>
+
+---
+
+export default Split
+
+A tweet has 3 Parts
+
+
+* Header with information
+* Content
+* Footer with actions
+
+---
+
+export default Layout
+
+# Let's look at all of these in simplified twitter code
+
+---
+export default LayoutNoFooter
+
+<CodeSurfer
+  title="Header"
+  theme={nightOwl}
+  lang="markup"
+  code={`
+  <div>
+    <a href="..">
+      <span>
+        <strong>Sara Vieira</strong>
+        <small class="time">
+          Aug 23
+        </small>
+      </span>
+    </a>
+  </div>
+  `}
+ steps={[
+    { lines: [1, 10] }
+  ]}
+/>
+
+---
+
+export default Layout
+
+# How can we improve this ?
+
+---
+export default LayoutNoFooter
+
+<CodeSurfer
+  title="Header"
+  theme={nightOwl}
+  lang="markup"
+  code={`
+  <header>
+    <a href="..">
+      <strong>Sara Vieira</strong>
+      <time>
+        Aug 23
+      </time>
+    </a>
+  </header>
+  `}
+ steps={[
+    { lines: [1, 10] }
+  ]}
+/>
+
+---
+
+export default LayoutNoFooter
+
+<CodeSurfer
+  title="Content"
+  theme={nightOwl}
+  lang="markup"
+  code={`
+    <div>
+      <p>I'm proud to say and happy to
+      announce that I have missed
+      my first flight ever 😐😐😐😐</p>
+    </div>
+  `}
+ steps={[
+    { lines: [1, 10] }
+  ]}
+/>
+---
+
+export default Layout
+
+# How can we improve this ?
+
+---
+
+export default LayoutNoFooter
+
+<CodeSurfer
+  title="Content"
+  theme={nightOwl}
+  lang="markup"
+  code={`
+    <section>
+      <p>I'm proud to say and happy to
+      announce that I have missed
+      my first flight ever 😐😐😐😐</p>
+    </section>
+  `}
+ steps={[
+    { lines: [1, 10] }
+  ]}
+/>
+
+---
+
+export default LayoutNoFooter
+
+<CodeSurfer
+  title="Footer"
+  theme={nightOwl}
+  lang="markup"
+  code={`
+  <div>
+    <div>
+      <button>
+        <div>
+          <span class="Icon--reply"></span>
+        </div>
+        <span>
+          24
+        </span>
+      </button>
+    </div>
+    <div>
+      <button>
+        <div>
+          <span class="Icon--retweet"></span>
+        </div>
+        <span> </span>
+      </button>
+    </div>
+    <div>
+      <button>
+        <div>
+          <span class="Icon--heart"></span>
+        </div>
+        <span>144</span>
+      </button>
+    </div>
+  </div>
+  `}
+ steps={[
+    { lines: [1, 10] }
+  ]}
+/>
+---
+
+export default Layout
+
+# How can we improve this ?
+
+---
+
+export default LayoutNoFooter
+
+<CodeSurfer
+  title="Footer"
+  theme={nightOwl}
+  lang="markup"
+  code={`
+  <footer>
+    <section>
+      <button>
+        <svg role="img" /> 24
+      </button>
+    </section>
+    <section>
+      <button>
+        <svg role="img" />
+      </button>
+    </section>
+    <section>
+      <button>
+        <svg role="img" /> 144
+      </button>
+    </section>
+  </footer>
+  `}
+ steps={[
+    { lines: [1, 10] }
+  ]}
+/>
+---
+
+export default Layout
+
+# But what happened ?
+
+## We used to care a lot about this
+
+---
+
+export default Layout
+
+# Frameworks happened
+
+---
+
+export default Layout
+
+# React didn't allow two things being rendered on a page for a long time
+
+---
+
+export default LayoutNoFooter
+
+<CodeSurfer
+  title="This wasn't possible"
+  theme={nightOwl}
+  lang="jsx"
+  code={`
+    export default () => (
+      <header>I am a header</header>
+      <section>I am a section</section>
+      <footer>I am a footer</footer>
+    )
+  `}
+ steps={[
+    { lines: [1, 10] }
+  ]}
+/>
+---
+
+export default Layout
+
+# We are lazy! Me too!
+
+## Mostly me really
+
+---
+
+export default Layout
+
+# Instead of thinking the best way to do things we..
+
+---
+
+export default LayoutNoFooter
+
+<CodeSurfer
+  title="Put a div arround things"
+  theme={nightOwl}
+  lang="jsx"
+  code={`
+    export default () => (
+      <div>
+        <header>I am a header</header>
+        <section>I am a section</section>
+        <footer>I am a footer</footer>
+      </div>
+    )
+  `}
+ steps={[
+    { lines: [1, 10] }
+  ]}
+/>
+---
+
+
+export default Layout
+
+# Before we knew it everything was a div
+
+
+---
+
+export default Layout
+
+# Fragments
+
+## Please use them
+
+---
+
+export default LayoutNoFooter
+
+<CodeSurfer
+  title="These are dumb components that don't render anything to the DOM"
+  theme={nightOwl}
+  lang="jsx"
+  code={`
+    export default () => (
+      <Fragment>
+        <header>I am a header</header>
+        <section>I am a section</section>
+        <footer>I am a footer</footer>
+      </Fragment>
+    )
+  `}
+ steps={[
+    { lines: [1, 10] }
+  ]}
+/>
+---
+
+export default Layout
+
+# Vue
+
+---
+
+export default Layout
+
+# Bad News:
+
+## There is no official way to support Fragments
+
+---
+
+export default Layout
+
+# Good News:
+
+## There are ways
+
+---
+
+export default Layout
+
+# [Vue Fragments](https://www.npmjs.com/package/vue-fragments)
+
+### doesn't support ssr 😭
+
+
+[Example](https://codesandbox.io/s/j7rxo84nq9)
+
+---
+export default Layout
+
+# You can use templates if it's not root
+
+---
+
+
+export default LayoutNoFooter
+
+<CodeSurfer
+  title="No need to clug the dom"
+  theme={nightOwl}
+  lang="markup"
+  code={`
+    <template>
+      <main class="hello">
+        <h1>Awesome Vue Tools</h1>
+        <template v-for="a of arr">
+          <p :key="a">{{a}}</p>
+        </template>
+      </main>
+    </template>
+    <script>
+    export default {
+      name: "Tools",
+      data() {
+        return {
+          arr: ['NuxtJS', 'VueCLI', 'VuePress']
+        };
+      }
+    };
+    </script>
+  `}
+ steps={[
+    { lines: [1, 10] }
+  ]}
+/>
+---
+
+export default Layout
+
+# Most important
+
+## Take care on your HTML
+---
+
+export default Layout
+
+# We can make more readable code
+
+---
+
+export default Layout
+
+# We can do better
+
 
 export default Layout
 

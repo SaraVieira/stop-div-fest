@@ -40,7 +40,9 @@ const Split = ({ children }) => {
         }}
       >
         {kids.map(k => (
-          <Half width={1 / times}>{k}</Half>
+          <Half key={k} width={1 / times}>
+            {k}
+          </Half>
         ))}
       </Flex>
       <Footer>
