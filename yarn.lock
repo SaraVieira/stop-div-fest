@@ -1393,12 +1393,12 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
-code-surfer@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/code-surfer/-/code-surfer-0.2.1.tgz#4deb109bba03949b5e244b3f767b7c36c7347e88"
+code-surfer@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/code-surfer/-/code-surfer-0.2.2.tgz#712b7b5dc969bc8b095c3edf302a484aa36722e1"
   dependencies:
     glamor "^2.20.40"
-    prism-react-renderer "^0.1.2"
+    prism-react-renderer "^0.1.3"
 
 collapse-white-space@^1.0.0, collapse-white-space@^1.0.2:
   version "1.0.4"
@@ -3058,11 +3058,11 @@ mdurl@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
 
-mdx-deck-code-surfer@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/mdx-deck-code-surfer/-/mdx-deck-code-surfer-0.2.1.tgz#78d1dfbbc86c54677228e6fd462b5dad769294c5"
+mdx-deck-code-surfer@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/mdx-deck-code-surfer/-/mdx-deck-code-surfer-0.2.2.tgz#f3941897d4568026fcc045504f2402485c5a6ad2"
   dependencies:
-    code-surfer "^0.2.1"
+    code-surfer "^0.2.2"
 
 mdx-deck@1.6.5:
   version "1.6.5"
@@ -3703,9 +3703,9 @@ prepend-http@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
 
-prism-react-renderer@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/prism-react-renderer/-/prism-react-renderer-0.1.2.tgz#4130ede656f860943fc6e37a1506de9c3614d437"
+prism-react-renderer@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/prism-react-renderer/-/prism-react-renderer-0.1.3.tgz#b5b733cadce0c8659d8d2e2959737f11aaac30ed"
 
 prismjs@^1.8.4, prismjs@~1.15.0:
   version "1.15.0"
